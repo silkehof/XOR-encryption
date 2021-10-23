@@ -6,20 +6,20 @@ public class Encryption {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Type 'e' for encoding or 'd' for decoding:");
+        String command = scanner.nextLine();
         System.out.println("Please type your message:");
         String message = scanner.nextLine();
         System.out.println("Provide key:");
         String key = scanner.nextLine();
-        System.out.println("Type 'e' for encoding or 'd' for decoding:");
-        String command = scanner.nextLine();
-        
+
         String fullCommand = "";
         if (command.equals("e")) {
             fullCommand = "encode";
         } else if (command.equals("d")) {
             fullCommand = "decode";
         }
-        
+
         // Prints error if command was not "d" or "e", otherwise prints error message
         if (fullCommand.length() == 0) {
             System.out.println("Error: Invalid command!");
